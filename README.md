@@ -64,7 +64,7 @@ When it says closed, delete the row. -->
 
 Also:
 
-- Proposed re-exporting @solana/codecs from Solana's `web3.js` v3 [#3943](https://github.com/solana-foundation/solana-web3.js/pull/3943). Review dropped the re-export over maintenance cost and IIFE bundle size, and the PR merged with the maintainer's IIFE smoke test and Rollup fix.
+- Proposed re-exporting `@solana/codecs` from Solana's web3.js v3 ([#3943](https://github.com/solana-foundation/solana-web3.js/pull/3943)). Review dropped the re-export over maintenance cost and IIFE bundle size, but review of the PR surfaced a Rollup bug that made the v3 IIFE bundles throw in browsers; the PR merged with the maintainer's fix and runtime smoke test.
 
 - proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
 

@@ -1,6 +1,4 @@
-# Hi there 👋
-
-## Arunim Shukla
+# Arunim Shukla
 
 ![AI](https://img.shields.io/badge/AI-1F3A5F?style=flat-square)
 ![Security](https://img.shields.io/badge/Security-1F3A5F?style=flat-square)
@@ -51,8 +49,7 @@ Fixes accepted by the maintainers of these projects:
 
 ## In review
  
-Open pull requests that maintainers are working through. The status
-badges update on their own when a PR is merged or closed.
+Open pull requests that maintainers are working through. The status badges update on their own when a PR is merged or closed.
  
 <!-- Add a PR here only after a human maintainer has reviewed it.
 When its badge says merged, move it to "Merged upstream".
@@ -65,7 +62,11 @@ When it says closed, delete the row. -->
 | [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL | ![state](https://img.shields.io/github/pulls/detail/state/centrifuge/api-v3/489?style=flat-square&label=) Approved |
 | [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2149) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2149?style=flat-square&label=) Awaiting review |
 
-Also: proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
+Also:
+
+- Proposed re-exporting @solana/codecs from Solana's `web3.js` v3 [#3943](https://github.com/solana-foundation/solana-web3.js/pull/3943). Review dropped the re-export over maintenance cost and IIFE bundle size, and the PR merged with the maintainer's IIFE smoke test and Rollup fix.
+
+- proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
 
 ## Numbers behind the work
 

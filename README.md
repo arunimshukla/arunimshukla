@@ -64,8 +64,7 @@ When it says closed, delete the row. -->
 | [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL | ![state](https://img.shields.io/github/pulls/detail/state/centrifuge/api-v3/489?style=flat-square&label=) Approved |
 | [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2149) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2149?style=flat-square&label=) Awaiting review |
 
- 
-Also: found a Claude Code startup failure in Trail of Bits' `second-opinion` plugin and proposed the fix ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
+Also: proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
 
 ## Numbers behind the work
 

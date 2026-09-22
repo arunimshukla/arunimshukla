@@ -47,6 +47,7 @@ Fixes accepted by the maintainers of these projects:
 | [nasa/delta](https://github.com/nasa/delta/pull/158) | Fixed cache eviction for files |
 | [Samsung/CredSweeper](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction, so credentials inside current Chrome extensions are no longer skipped |
 | [ethsystems/map](https://github.com/ethsystems/map/pull/200) | Clarified the ERC-3643 transfer and admin paths |
+| [Consensys/ask-o11y-plugin](https://github.com/Consensys/ask-o11y-plugin/pull/226) | Switched LLM requests from the deprecated `max_tokens` to `max_completion_tokens`, with tests. Shipped in v0.3.18 |
 
 ## In review
  

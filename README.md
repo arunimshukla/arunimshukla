@@ -60,7 +60,7 @@ When it says closed, delete the row. -->
 | Project | Change | Status |
 | --- | --- | --- |
 | [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL | ![state](https://img.shields.io/github/pulls/detail/state/centrifuge/api-v3/489?style=flat-square&label=) Approved |
-| [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2149) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2149?style=flat-square&label=) Awaiting review |
+| [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2150) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2150?style=flat-square&label=) Awaiting review |
 
 Also:
 

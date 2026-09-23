@@ -42,6 +42,7 @@ Fixes accepted by the maintainers of these projects:
 | Project | Change |
 | --- | --- |
 | [ethereum/go-ethereum](https://github.com/ethereum/go-ethereum/pull/35710) | Corrected the `eth` RPC endpoint documentation |
+| [google/skill-reach](https://github.com/google/skill-reach/pull/23) | Preserved query metadata across CSV and JSONL exchange formats |
 | [nasa/delta](https://github.com/nasa/delta/pull/158) | Fixed cache eviction for files |
 | [Samsung/CredSweeper](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction, so credentials inside current Chrome extensions are no longer skipped |
 | [ethsystems/map](https://github.com/ethsystems/map/pull/200) | Clarified the ERC-3643 transfer and admin paths |
@@ -58,7 +59,6 @@ When it says closed, delete the row. -->
  
 | Project | Change | Status |
 | --- | --- | --- |
-| [google/skill-reach](https://github.com/google/skill-reach/pull/23) | Preserve query metadata across CSV and JSONL exchange formats | ![state](https://img.shields.io/github/pulls/detail/state/google/skill-reach/23?style=flat-square&label=) Review feedback addressed |
 | [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL | ![state](https://img.shields.io/github/pulls/detail/state/centrifuge/api-v3/489?style=flat-square&label=) Approved |
 | [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2149) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2149?style=flat-square&label=) Awaiting review |
 

@@ -46,6 +46,7 @@ Fixes accepted by the maintainers of these projects:
 | [Samsung/CredSweeper](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction, so credentials inside current Chrome extensions are no longer skipped |
 | [ethsystems/map](https://github.com/ethsystems/map/pull/200) | Clarified the ERC-3643 transfer and admin paths |
 | [Consensys/ask-o11y-plugin](https://github.com/Consensys/ask-o11y-plugin/pull/226) | Switched LLM requests from the deprecated `max_tokens` to `max_completion_tokens`, with tests. Shipped in v0.3.18 |
+| [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
 
 ## In review
  
@@ -57,7 +58,6 @@ When it says closed, delete the row. -->
  
 | Project | Change | Status |
 | --- | --- | --- |
-| [solana-foundation/solana-web3.js](https://github.com/solana-foundation/solana-web3.js/pull/3943) | Proposed re-exporting `@solana/codecs`; review narrowed it to IIFE bundle smoke tests written by the maintainer | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-web3.js/3943?style=flat-square&label=) Reviewer approved; code-owner review pending |
 | [google/skill-reach](https://github.com/google/skill-reach/pull/23) | Preserve query metadata across CSV and JSONL exchange formats | ![state](https://img.shields.io/github/pulls/detail/state/google/skill-reach/23?style=flat-square&label=) Review feedback addressed |
 | [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL | ![state](https://img.shields.io/github/pulls/detail/state/centrifuge/api-v3/489?style=flat-square&label=) Approved |
 | [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2149) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2149?style=flat-square&label=) Awaiting review |

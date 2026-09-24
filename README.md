@@ -50,6 +50,21 @@ Fixes accepted by the maintainers of these projects:
 | [NethermindEth/nethermind](https://github.com/NethermindEth/nethermind/pull/13747) | Made `engine_newPayloadV3+` reject null or missing `withdrawals`, `blobGasUsed` and `excessBlobGas` with `-32602` instead of marking the payload `INVALID`. My fix and regression test, merged in a maintainer PR that extended the tests |
 | [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
 
+## Recent validated contributions
+
+Submitted upstream changes backed by reproducible regression evidence and broader checks. These pull requests are open for maintainer review; they are not presented as merged or accepted.
+
+| Project | Change | Status |
+| --- | --- | --- |
+| [openai/codex-security #1020](https://github.com/openai/codex-security/pull/1020) | Required verification evidence before `no_change` remediation results are treated as resolved, with a regression proving evidence-free results fail closed | ![state](https://img.shields.io/github/pulls/detail/state/openai/codex-security/1020?style=flat-square&label=) |
+| [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | Added Solidity `.sol` files to diff scan inventories and rank inputs, with red/green coverage across repository, revision and local-patch modes | ![state](https://img.shields.io/github/pulls/detail/state/openai/codex-security/1021?style=flat-square&label=) |
+| [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Rejected `engine_getPayloadV5` at Amsterdam with `-38005 Unsupported fork`, while preserving Osaka V5 behaviour | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/nethermind/13755?style=flat-square&label=) |
+| [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Kept tracing topic labels visible to metrics at the default `info` log level, with an integration regression | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |
+| [NethermindEth/pluto #715](https://github.com/NethermindEth/pluto/pull/715) | Stopped ignored OTLP header values from leaking into WARN logs; the warning now records only the header count | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/715?style=flat-square&label=) |
+
+<!-- Move an entry to "Merged upstream" only after GitHub reports it merged.
+Move human-reviewed open work to "In review"; remove entries closed without merge. -->
+
 ## In review
  
 Open pull requests that maintainers are working through. The status badges update on their own when a PR is merged or closed.

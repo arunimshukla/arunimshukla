@@ -41,6 +41,7 @@ Fixes accepted by the maintainers of these projects:
 
 | Project | Change |
 | --- | --- |
+| [openai/openai-guardrails-js #148](https://github.com/openai/openai-guardrails-js/pull/148) | Fixed vector-store uploads for supported documents inside directories whose names contain dots. Three red/green regressions, 882 tests, multi-version CI and CodeQL passed |
 | [ethereum/go-ethereum](https://github.com/ethereum/go-ethereum/pull/35710) | Corrected the `eth` RPC endpoint documentation |
 | [google/skill-reach](https://github.com/google/skill-reach/pull/23) | Preserved query metadata across CSV and JSONL exchange formats |
 | [nasa/delta](https://github.com/nasa/delta/pull/158) | Fixed cache eviction for files |

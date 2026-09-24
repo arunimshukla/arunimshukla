@@ -97,6 +97,10 @@ Also:
 
 ## Selected work
  
+[![Open Source Fix Analysis](https://github-readme-stats.vercel.app/api/pin/?username=arunimshukla&repo=open-source-fix-analysis&theme=transparent&hide_border=true)](https://github.com/arunimshukla/open-source-fix-analysis)
+
+Plain-English case studies of verified open-source fixes, with each problem, change and proof recorded.
+
 - [GTM-Teardowns](https://github.com/arunimshukla/GTM-Teardowns):
   public, audit-first go-to-market teardowns of target companies.
   

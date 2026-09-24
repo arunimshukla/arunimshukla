@@ -47,7 +47,7 @@ Fixes accepted by the maintainers of these projects:
 | [Samsung/CredSweeper](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction, so credentials inside current Chrome extensions are no longer skipped |
 | [ethsystems/map](https://github.com/ethsystems/map/pull/200) | Clarified the ERC-3643 transfer and admin paths |
 | [Consensys/ask-o11y-plugin](https://github.com/Consensys/ask-o11y-plugin/pull/226) | Switched LLM requests from the deprecated `max_tokens` to `max_completion_tokens`, with tests. Shipped in v0.3.18 |
-| [NethermindEth/nethermind](https://github.com/NethermindEth/nethermind/pull/13747) | Rejected explicit `null` values for required Cancun `engine_newPayload` fields across V3–V5, with regression coverage |
+| [NethermindEth/nethermind](https://github.com/NethermindEth/nethermind/pull/13747) | Made `engine_newPayloadV3+` reject null or missing `withdrawals`, `blobGasUsed` and `excessBlobGas` with `-32602` instead of marking the payload `INVALID`. My fix and regression test, merged in a maintainer PR that extended the tests |
 | [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
 
 ## In review

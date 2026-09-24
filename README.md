@@ -48,6 +48,7 @@ Fixes accepted by the maintainers of these projects:
 | [ethsystems/map](https://github.com/ethsystems/map/pull/200) | Clarified the ERC-3643 transfer and admin paths |
 | [Consensys/ask-o11y-plugin](https://github.com/Consensys/ask-o11y-plugin/pull/226) | Switched LLM requests from the deprecated `max_tokens` to `max_completion_tokens`, with tests. Shipped in v0.3.18 |
 | [NethermindEth/nethermind](https://github.com/NethermindEth/nethermind/pull/13747) | Made `engine_newPayloadV3+` reject null or missing `withdrawals`, `blobGasUsed` and `excessBlobGas` with `-32602` instead of marking the payload `INVALID`. My fix and regression test, merged in a maintainer PR that extended the tests |
+| [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Fixed the Amsterdam Engine API boundary: `engine_getPayloadV5` now returns `-38005 Unsupported fork` at Amsterdam instead of dropping `slotNumber` and `blockAccessList`. Added a red/green regression and preserved Osaka V5 behaviour; merged upstream and closed [#13713](https://github.com/NethermindEth/nethermind/issues/13713) |
 | [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
 
 ## Recent validated contributions
@@ -58,7 +59,6 @@ Submitted upstream changes backed by reproducible regression evidence and broade
 | --- | --- | --- |
 | [openai/codex-security #1020](https://github.com/openai/codex-security/pull/1020) | Required verification evidence before `no_change` remediation results are treated as resolved, with a regression proving evidence-free results fail closed | ![state](https://img.shields.io/github/pulls/detail/state/openai/codex-security/1020?style=flat-square&label=) |
 | [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | Added Solidity `.sol` files to diff scan inventories and rank inputs, with red/green coverage across repository, revision and local-patch modes | ![state](https://img.shields.io/github/pulls/detail/state/openai/codex-security/1021?style=flat-square&label=) |
-| [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Rejected `engine_getPayloadV5` at Amsterdam with `-38005 Unsupported fork`, while preserving Osaka V5 behaviour | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/nethermind/13755?style=flat-square&label=) |
 | [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Kept tracing topic labels visible to metrics at the default `info` log level, with an integration regression | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |
 | [NethermindEth/pluto #715](https://github.com/NethermindEth/pluto/pull/715) | Stopped ignored OTLP header values from leaking into WARN logs; the warning now records only the header count | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/715?style=flat-square&label=) |
 

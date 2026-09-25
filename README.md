@@ -35,9 +35,9 @@ I work at the intersection of security, open source, Ethereum and AI, with a foc
 ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)
 ![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
 
-## Merged upstream
+## Accepted upstream
 
-Fixes accepted by the maintainers of these projects:
+Fixes merged, cherry-picked or otherwise incorporated upstream by project maintainers:
 
 | Project | Change |
 | --- | --- |
@@ -47,6 +47,7 @@ Fixes accepted by the maintainers of these projects:
 | [nasa/delta](https://github.com/nasa/delta/pull/158) | Fixed cache eviction for files |
 | [Samsung/CredSweeper](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction, so credentials inside current Chrome extensions are no longer skipped |
 | [ethsystems/map](https://github.com/ethsystems/map/pull/200) | Clarified the ERC-3643 transfer and admin paths |
+| [ethsystems/web #44](https://github.com/ethsystems/web/pull/44) | Repaired four broken proof-of-concept and specification links across the private bonds, shielded transfers and cross-chain swap write-ups. Cherry-picked upstream in [commit `82bd4f0`](https://github.com/ethsystems/web/commit/82bd4f01ebe61dc1fec30d0b1c41de0c67ae1019), preserving my authorship |
 | [Consensys/ask-o11y-plugin](https://github.com/Consensys/ask-o11y-plugin/pull/226) | Switched LLM requests from the deprecated `max_tokens` to `max_completion_tokens`, with tests. Shipped in v0.3.18 |
 | [NethermindEth/nethermind](https://github.com/NethermindEth/nethermind/pull/13747) | Made `engine_newPayloadV3+` reject null or missing `withdrawals`, `blobGasUsed` and `excessBlobGas` with `-32602` instead of marking the payload `INVALID`. My fix and regression test, merged in a maintainer PR that extended the tests |
 | [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Fixed the Amsterdam Engine API boundary: `engine_getPayloadV5` now returns `-38005 Unsupported fork` at Amsterdam instead of dropping `slotNumber` and `blockAccessList`. Added a red/green regression and preserved Osaka V5 behaviour; merged upstream and closed [#13713](https://github.com/NethermindEth/nethermind/issues/13713) |
@@ -63,8 +64,8 @@ Submitted upstream changes backed by reproducible regression evidence and broade
 | [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Kept tracing topic labels visible to metrics at the default `info` log level, with an integration regression | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |
 | [NethermindEth/pluto #715](https://github.com/NethermindEth/pluto/pull/715) | Stopped ignored OTLP header values from leaking into WARN logs; the warning now records only the header count | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/715?style=flat-square&label=) |
 
-<!-- Move an entry to "Merged upstream" only after GitHub reports it merged.
-Move human-reviewed open work to "In review"; remove entries closed without merge. -->
+<!-- Move an entry to "Accepted upstream" only when GitHub records a merge or a maintainer provides a verifiable upstream commit incorporating the change.
+Move human-reviewed open work to "In review"; remove entries closed without acceptance. -->
 
 ## In review
  

@@ -10,7 +10,7 @@ I work across Ethereum protocol implementation, security and AI tooling. I turn 
 
 ## Current focus
 
-Ethereum execution-client conformance, particularly Nethermind's Amsterdam/Glamsterdam Engine API surface, and evidence-backed security improvements in AI tooling.
+Ethereum execution-client conformance, particularly Nethermind's Amsterdam/Glamsterdam Engine API surface, and evidence-backed security improvements in AI tooling, including OpenAI Codex Security.
 
 | Inspect | Reproduce | Remediate | Prove |
 | --- | --- | --- | --- |
@@ -32,6 +32,7 @@ Changes merged, cherry-picked or otherwise incorporated by upstream maintainers:
 
 | Project | Verified outcome |
 | --- | --- |
+| [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | Fixed Solidity-only changes being silently omitted from Codex Security diff scans. Added `.sol` to scan inventories and ranking inputs with regression coverage across repository, revision and local-patch modes |
 | [openai/openai-guardrails-js #148](https://github.com/openai/openai-guardrails-js/pull/148) | Fixed vector-store uploads for supported documents inside directories whose names contain dots. Three red/green regressions, 882 tests, multi-version CI and CodeQL passed |
 | [Samsung/CredSweeper #951](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction so credentials inside current Chrome extensions are no longer skipped |
 | [google/skill-reach #23](https://github.com/google/skill-reach/pull/23) | Preserved query metadata across CSV and JSONL exchange formats |
@@ -59,7 +60,6 @@ Open changes backed by reproducible regression evidence and focused verification
 | Project | Change | Status |
 | --- | --- | --- |
 | [openai/codex-security #1020](https://github.com/openai/codex-security/pull/1020) | Requires verification evidence before `no_change` remediation results are treated as resolved | ![state](https://img.shields.io/github/pulls/detail/state/openai/codex-security/1020?style=flat-square&label=) |
-| [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | Adds Solidity files to diff-scan inventories and ranking inputs across repository, revision and local-patch modes | ![state](https://img.shields.io/github/pulls/detail/state/openai/codex-security/1021?style=flat-square&label=) |
 | [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Keeps tracing topic labels visible to metrics at the default `info` log level | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |
 | [NethermindEth/pluto #715](https://github.com/NethermindEth/pluto/pull/715) | Prevents ignored OTLP header values from leaking into warning logs | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/715?style=flat-square&label=) |
 | [centrifuge/api-v3 #489](https://github.com/centrifuge/api-v3/pull/489) | Adds the Pharos block explorer URL | ![state](https://img.shields.io/github/pulls/detail/state/centrifuge/api-v3/489?style=flat-square&label=) |

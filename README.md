@@ -10,7 +10,7 @@ I work across Ethereum protocol implementation, security and AI tooling. I turn 
 
 ## Current focus
 
-Ethereum execution-client conformance, particularly Nethermind's Amsterdam/Glamsterdam Engine API surface, and evidence-backed security improvements in AI tooling, including OpenAI Codex Security.
+Ethereum execution-client conformance, particularly Nethermind's Amsterdam/Glamsterdam Engine API surface, and evidence-backed security improvements in AI tooling.
 
 | Inspect | Reproduce | Remediate | Prove |
 | --- | --- | --- | --- |
@@ -32,6 +32,7 @@ Changes merged, cherry-picked or otherwise incorporated by upstream maintainers:
 
 | Project | Verified outcome |
 | --- | --- |
+| [Nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) · [#13747](https://github.com/NethermindEth/nethermind/pull/13747) | Fixed Amsterdam `engine_getPayloadV5` fork gating and V3+ required payload-field validation, with regression coverage at the protocol boundaries |
 | [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | Fixed Solidity-only changes being silently omitted from Codex Security diff scans. Added `.sol` to scan inventories and ranking inputs with regression coverage across repository, revision and local-patch modes |
 | [openai/openai-guardrails-js #148](https://github.com/openai/openai-guardrails-js/pull/148) | Fixed vector-store uploads for supported documents inside directories whose names contain dots. Three red/green regressions, 882 tests, multi-version CI and CodeQL passed |
 | [Samsung/CredSweeper #951](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction so credentials inside current Chrome extensions are no longer skipped |

@@ -42,6 +42,7 @@ Fixes merged, cherry-picked or otherwise incorporated upstream by project mainta
 | Project | Change |
 | --- | --- |
 | [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | Added Solidity `.sol` files to diff scan inventories and rank inputs, with red/green coverage across repository, revision and local-patch modes |
+| [openai/codex-security #1020](https://github.com/openai/codex-security/pull/1020) | Required verification evidence before `no_change` remediation results are treated as resolved, with a regression proving evidence-free results fail closed |
 | [openai/openai-guardrails-js #148](https://github.com/openai/openai-guardrails-js/pull/148) | Fixed vector-store uploads for supported documents inside directories whose names contain dots. Three red/green regressions, 882 tests, multi-version CI and CodeQL passed |
 | [ethereum/go-ethereum](https://github.com/ethereum/go-ethereum/pull/35710) | Corrected the `eth` RPC endpoint documentation |
 | [google/skill-reach](https://github.com/google/skill-reach/pull/23) | Preserved query metadata across CSV and JSONL exchange formats |
@@ -60,7 +61,6 @@ Submitted upstream changes backed by reproducible regression evidence and broade
 
 | Project | Change | Status |
 | --- | --- | --- |
-| [openai/codex-security #1020](https://github.com/openai/codex-security/pull/1020) | Required verification evidence before `no_change` remediation results are treated as resolved, with a regression proving evidence-free results fail closed | ![state](https://img.shields.io/github/pulls/detail/state/openai/codex-security/1020?style=flat-square&label=) |
 | [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Kept tracing topic labels visible to metrics at the default `info` log level, with an integration regression | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |
 | [NethermindEth/pluto #715](https://github.com/NethermindEth/pluto/pull/715) | Stopped ignored OTLP header values from leaking into WARN logs; the warning now records only the header count | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/715?style=flat-square&label=) |
 

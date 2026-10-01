@@ -84,7 +84,6 @@ When it says closed, delete the row. -->
  
 | Project | Change | Status |
 | --- | --- | --- |
-
 | [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2150) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2150?style=flat-square&label=) Awaiting review |
 
 Also:

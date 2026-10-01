@@ -57,6 +57,7 @@ Fixes merged, cherry-picked or otherwise incorporated upstream by project mainta
 | [NethermindEth/nethermind](https://github.com/NethermindEth/nethermind/pull/13747) | Made `engine_newPayloadV3+` reject null or missing `withdrawals`, `blobGasUsed` and `excessBlobGas` with `-32602` instead of marking the payload `INVALID`. My fix and regression test, merged in a maintainer PR that extended the tests |
 | [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Fixed the Amsterdam Engine API boundary: `engine_getPayloadV5` now returns `-38005 Unsupported fork` at Amsterdam instead of dropping `slotNumber` and `blockAccessList`. Added a red/green regression and preserved Osaka V5 behaviour; merged upstream and closed [#13713](https://github.com/NethermindEth/nethermind/issues/13713) |
 | [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
+| [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL |
 
 ## Recent validated contributions
 
@@ -83,7 +84,7 @@ When it says closed, delete the row. -->
  
 | Project | Change | Status |
 | --- | --- | --- |
-| [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL | ![state](https://img.shields.io/github/pulls/detail/state/centrifuge/api-v3/489?style=flat-square&label=) Approved |
+
 | [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2150) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2150?style=flat-square&label=) Awaiting review |
 
 Also:

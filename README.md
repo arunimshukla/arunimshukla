@@ -11,6 +11,54 @@
 
 I work at the intersection of security, open source, Ethereum and AI, with a focus on technical product marketing and developer-facing products.
 
+## Merged upstream
+
+Fixes merged, cherry-picked or otherwise incorporated upstream by project maintainers:
+
+| Project | Change |
+| --- | --- |
+| [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | Added Solidity `.sol` files to diff scan inventories and rank inputs, with red/green coverage across repository, revision and local-patch modes |
+| [openai/codex-security #1020](https://github.com/openai/codex-security/pull/1020) | Required verification evidence before `no_change` remediation results are treated as resolved, with a regression proving evidence-free results fail closed |
+| [openai/openai-guardrails-js #148](https://github.com/openai/openai-guardrails-js/pull/148) | Fixed vector-store uploads for supported documents inside directories whose names contain dots. Three red/green regressions, 882 tests, multi-version CI and CodeQL passed |
+| [GoogleChrome/chromium-dashboard #6946](https://github.com/GoogleChrome/chromium-dashboard/pull/6946) | Restored the “Draft Intent to Extend Experiment” email action when API-owner gates are active across normal launch, fast-track and deprecation processes. Added a regression covering all three definitions; merged as [`ca80064`](https://github.com/GoogleChrome/chromium-dashboard/commit/ca80064d966c5f58df7c25941ebe8416d7ae9a03) and deployed in [release #6950](https://github.com/GoogleChrome/chromium-dashboard/issues/6950) |
+| [promptfoo/promptfoo #11243](https://github.com/promptfoo/promptfoo/pull/11243) | Fixed Vertex Claude sampling resolution so explicit `top_p: 0` and `top_k: 0` values are preserved instead of being replaced or omitted. Maintainer verification covered 1,146 Google provider tests, typecheck, CLI build, formatting/lint and all 57 applicable PR checks |
+| [ethereum/go-ethereum](https://github.com/ethereum/go-ethereum/pull/35710) | Corrected the `eth` RPC endpoint documentation |
+| [ethereum/ethereum-org-website #19272](https://github.com/ethereum/ethereum-org-website/pull/19272) | Synced the Glamsterdam proposal list, removing EIP-7610 and adding eth/72 (EIP-8070), EIP-8136 and snap/2 (EIP-8189). Maintainers added me as an ethereum.org maintenance contributor in [#19364](https://github.com/ethereum/ethereum-org-website/pull/19364) |
+| [google/skill-reach](https://github.com/google/skill-reach/pull/23) | Preserved query metadata across CSV and JSONL exchange formats |
+| [nasa/delta](https://github.com/nasa/delta/pull/158) | Fixed cache eviction for files |
+| [Samsung/CredSweeper](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction, so credentials inside current Chrome extensions are no longer skipped |
+| [ethsystems/map](https://github.com/ethsystems/map/pull/200) | Clarified the ERC-3643 transfer and admin paths |
+| [ethsystems/web #44](https://github.com/ethsystems/web/pull/44) | Repaired four broken proof-of-concept and specification links across the private bonds, shielded transfers and cross-chain swap write-ups. Cherry-picked upstream in [commit `82bd4f0`](https://github.com/ethsystems/web/commit/82bd4f01ebe61dc1fec30d0b1c41de0c67ae1019), preserving my authorship |
+| [ethsystems/web #45](https://github.com/ethsystems/web/pull/45) | Fixed glossary link handling so linked terms and definitions render correctly and root map documents resolve to their GitHub source. Cherry-picked upstream in [commit `63f99bd`](https://github.com/ethsystems/web/commit/63f99bde89cddf512f0304b9912fd25e8917ca81), preserving my authorship; 58/58 tests passed and 218 pages built |
+| [Consensys/ask-o11y-plugin](https://github.com/Consensys/ask-o11y-plugin/pull/226) | Switched LLM requests from the deprecated `max_tokens` to `max_completion_tokens`, with tests. Shipped in v0.3.18 |
+| [NethermindEth/nethermind](https://github.com/NethermindEth/nethermind/pull/13747) | Made `engine_newPayloadV3+` reject null or missing `withdrawals`, `blobGasUsed` and `excessBlobGas` with `-32602` instead of marking the payload `INVALID`. My fix and regression test, merged in a maintainer PR that extended the tests |
+| [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Fixed the Amsterdam Engine API boundary: `engine_getPayloadV5` now returns `-38005 Unsupported fork` at Amsterdam instead of dropping `slotNumber` and `blockAccessList`. Added a red/green regression and preserved Osaka V5 behaviour; merged upstream and closed [#13713](https://github.com/NethermindEth/nethermind/issues/13713) |
+| [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
+| [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL |
+| [solana-foundation/solana-web3.js #3943](https://github.com/solana-foundation/solana-web3.js/pull/3943) | Added runtime smoke tests for both IIFE browser bundles. Review surfaced a Rollup substitution bug that made the v3 bundles throw in browsers; the PR merged with the maintainer's fix |
+
+Also:
+
+- proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
+
+## Selected work
+ 
+[![Open Source Fix Analysis](https://github-readme-stats.vercel.app/api/pin/?username=arunimshukla&repo=open-source-fix-analysis&theme=transparent&hide_border=true)](https://github.com/arunimshukla/open-source-fix-analysis)
+
+Plain-English case studies of verified open-source fixes, with each problem, change and proof recorded.
+
+- [GTM-Teardowns](https://github.com/arunimshukla/GTM-Teardowns):
+  public, audit-first go-to-market teardowns of target companies.
+  
+- [Web3 Security Library](https://github.com/immunefi-team/Web3-Security-Library)
+  ![Stars](https://img.shields.io/github/stars/immunefi-team/Web3-Security-Library?style=flat-square&label=stars&color=1F3A5F):
+  Immunefi's library of Web3 security tutorials and tools. Second-largest contributor while at Immunefi
+  
+  ([commits](https://github.com/immunefi-team/Web3-Security-Library/commits?author=Arunim-Immunefi)).
+- [Best-DeFi-Security-Practices](https://github.com/arunimshukla/Best-DeFi-Security-Practices)
+  ![Stars](https://img.shields.io/github/stars/arunimshukla/Best-DeFi-Security-Practices?style=flat-square&label=stars&color=1F3A5F):
+  a reference list of security practices for DeFi protocols.
+
 ## 📊 GitHub Stats
 
 <p>
@@ -35,31 +83,6 @@ I work at the intersection of security, open source, Ethereum and AI, with a foc
 ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)
 ![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
 
-## Merged upstream
-
-Fixes merged, cherry-picked or otherwise incorporated upstream by project maintainers:
-
-| Project | Change |
-| --- | --- |
-| [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | Added Solidity `.sol` files to diff scan inventories and rank inputs, with red/green coverage across repository, revision and local-patch modes |
-| [openai/codex-security #1020](https://github.com/openai/codex-security/pull/1020) | Required verification evidence before `no_change` remediation results are treated as resolved, with a regression proving evidence-free results fail closed |
-| [openai/openai-guardrails-js #148](https://github.com/openai/openai-guardrails-js/pull/148) | Fixed vector-store uploads for supported documents inside directories whose names contain dots. Three red/green regressions, 882 tests, multi-version CI and CodeQL passed |
-| [GoogleChrome/chromium-dashboard #6946](https://github.com/GoogleChrome/chromium-dashboard/pull/6946) | Restored the “Draft Intent to Extend Experiment” email action when API-owner gates are active across normal launch, fast-track and deprecation processes. Added a regression covering all three definitions; merged as [`ca80064`](https://github.com/GoogleChrome/chromium-dashboard/commit/ca80064d966c5f58df7c25941ebe8416d7ae9a03) and deployed in [release #6950](https://github.com/GoogleChrome/chromium-dashboard/issues/6950) |
-| [promptfoo/promptfoo #11243](https://github.com/promptfoo/promptfoo/pull/11243) | Fixed Vertex Claude sampling resolution so explicit `top_p: 0` and `top_k: 0` values are preserved instead of being replaced or omitted. Maintainer verification covered 1,146 Google provider tests, typecheck, CLI build, formatting/lint and all 57 applicable PR checks |
-| [ethereum/go-ethereum](https://github.com/ethereum/go-ethereum/pull/35710) | Corrected the `eth` RPC endpoint documentation |
-| [google/skill-reach](https://github.com/google/skill-reach/pull/23) | Preserved query metadata across CSV and JSONL exchange formats |
-| [nasa/delta](https://github.com/nasa/delta/pull/158) | Fixed cache eviction for files |
-| [Samsung/CredSweeper](https://github.com/Samsung/CredSweeper/pull/951) | Fixed CRX3 payload extraction, so credentials inside current Chrome extensions are no longer skipped |
-| [ethsystems/map](https://github.com/ethsystems/map/pull/200) | Clarified the ERC-3643 transfer and admin paths |
-| [ethsystems/web #44](https://github.com/ethsystems/web/pull/44) | Repaired four broken proof-of-concept and specification links across the private bonds, shielded transfers and cross-chain swap write-ups. Cherry-picked upstream in [commit `82bd4f0`](https://github.com/ethsystems/web/commit/82bd4f01ebe61dc1fec30d0b1c41de0c67ae1019), preserving my authorship |
-| [ethsystems/web #45](https://github.com/ethsystems/web/pull/45) | Fixed glossary link handling so linked terms and definitions render correctly and root map documents resolve to their GitHub source. Cherry-picked upstream in [commit `63f99bd`](https://github.com/ethsystems/web/commit/63f99bde89cddf512f0304b9912fd25e8917ca81), preserving my authorship; 58/58 tests passed and 218 pages built |
-| [Consensys/ask-o11y-plugin](https://github.com/Consensys/ask-o11y-plugin/pull/226) | Switched LLM requests from the deprecated `max_tokens` to `max_completion_tokens`, with tests. Shipped in v0.3.18 |
-| [NethermindEth/nethermind](https://github.com/NethermindEth/nethermind/pull/13747) | Made `engine_newPayloadV3+` reject null or missing `withdrawals`, `blobGasUsed` and `excessBlobGas` with `-32602` instead of marking the payload `INVALID`. My fix and regression test, merged in a maintainer PR that extended the tests |
-| [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Fixed the Amsterdam Engine API boundary: `engine_getPayloadV5` now returns `-38005 Unsupported fork` at Amsterdam instead of dropping `slotNumber` and `blockAccessList`. Added a red/green regression and preserved Osaka V5 behaviour; merged upstream and closed [#13713](https://github.com/NethermindEth/nethermind/issues/13713) |
-| [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
-| [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL |
-| [solana-foundation/solana-web3.js #3943](https://github.com/solana-foundation/solana-web3.js/pull/3943) | Added runtime smoke tests for both IIFE browser bundles. Review surfaced a Rollup substitution bug that made the v3 bundles throw in browsers; the PR merged with the maintainer's fix |
-
 ## Recent validated contributions
 
 Submitted upstream changes backed by reproducible regression evidence and broader checks. These pull requests are open for maintainer review; they are not presented as merged or accepted.
@@ -71,25 +94,10 @@ Submitted upstream changes backed by reproducible regression evidence and broade
 | [promptfoo/modelaudit #1859](https://github.com/promptfoo/modelaudit/pull/1859) | Preserved native SafeTensors routing for valid FDICT-shaped headers while keeping ambiguous and genuine preset-dictionary zlib inputs fail-closed; fixes #1854 with routing and scanner regressions | ![state](https://img.shields.io/github/pulls/detail/state/promptfoo/modelaudit/1859?style=flat-square&label=) |
 | [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Kept tracing topic labels visible to metrics at the default `info` log level, with an integration regression | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |
 | [NethermindEth/pluto #715](https://github.com/NethermindEth/pluto/pull/715) | Stopped ignored OTLP header values from leaking into WARN logs; the warning now records only the header count | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/715?style=flat-square&label=) |
+| [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2150) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2150?style=flat-square&label=) Awaiting review |
 
 <!-- Move an entry to "Merged upstream" only when GitHub records a merge or a maintainer provides a verifiable upstream commit incorporating the change.
 Move human-reviewed open work to "In review"; remove entries closed without acceptance. -->
-
-## In review
- 
-Open pull requests that maintainers are working through. The status badges update on their own when a PR is merged or closed.
- 
-<!-- Add a PR here only after a human maintainer has reviewed it.
-When its badge says merged, move it to "Merged upstream".
-When it says closed, delete the row. -->
- 
-| Project | Change | Status |
-| --- | --- | --- |
-| [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2150) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2150?style=flat-square&label=) Awaiting review |
-
-Also:
-
-- proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
 
 ## Numbers behind the work
 
@@ -101,24 +109,6 @@ Also:
 | Community | 2,300+ member security community |
 | Disclosures | Acknowledged by the DoD (DARPA, Air Force, Navy), Toyota and Philips |
 | Category | Created W3SPM (Web3 Security Posture Management) |
-
-## Selected work
- 
-[![Open Source Fix Analysis](https://github-readme-stats.vercel.app/api/pin/?username=arunimshukla&repo=open-source-fix-analysis&theme=transparent&hide_border=true)](https://github.com/arunimshukla/open-source-fix-analysis)
-
-Plain-English case studies of verified open-source fixes, with each problem, change and proof recorded.
-
-- [GTM-Teardowns](https://github.com/arunimshukla/GTM-Teardowns):
-  public, audit-first go-to-market teardowns of target companies.
-  
-- [Web3 Security Library](https://github.com/immunefi-team/Web3-Security-Library)
-  ![Stars](https://img.shields.io/github/stars/immunefi-team/Web3-Security-Library?style=flat-square&label=stars&color=1F3A5F):
-  Immunefi's library of Web3 security tutorials and tools. Second-largest contributor while at Immunefi
-  
-  ([commits](https://github.com/immunefi-team/Web3-Security-Library/commits?author=Arunim-Immunefi)).
-- [Best-DeFi-Security-Practices](https://github.com/arunimshukla/Best-DeFi-Security-Practices)
-  ![Stars](https://img.shields.io/github/stars/arunimshukla/Best-DeFi-Security-Practices?style=flat-square&label=stars&color=1F3A5F):
-  a reference list of security practices for DeFi protocols.
 
 ## Contact
 

@@ -58,6 +58,7 @@ Fixes merged, cherry-picked or otherwise incorporated upstream by project mainta
 | [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Fixed the Amsterdam Engine API boundary: `engine_getPayloadV5` now returns `-38005 Unsupported fork` at Amsterdam instead of dropping `slotNumber` and `blockAccessList`. Added a red/green regression and preserved Osaka V5 behaviour; merged upstream and closed [#13713](https://github.com/NethermindEth/nethermind/issues/13713) |
 | [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
 | [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | Added the Pharos block explorer URL |
+| [solana-foundation/solana-web3.js #3943](https://github.com/solana-foundation/solana-web3.js/pull/3943) | Added runtime smoke tests for both IIFE browser bundles. Review surfaced a Rollup substitution bug that made the v3 bundles throw in browsers; the PR merged with the maintainer's fix |
 
 ## Recent validated contributions
 
@@ -87,8 +88,6 @@ When it says closed, delete the row. -->
 | [solana-foundation/solana-com](https://github.com/solana-foundation/solana-com/pull/2150) | Slot-time block requests now accept v1 transactions | ![state](https://img.shields.io/github/pulls/detail/state/solana-foundation/solana-com/2150?style=flat-square&label=) Awaiting review |
 
 Also:
-
-- Proposed re-exporting `@solana/codecs` from Solana's web3.js v3 ([#3943](https://github.com/solana-foundation/solana-web3.js/pull/3943)). Review dropped the re-export over maintenance cost and IIFE bundle size, but review of the PR surfaced a Rollup bug that made the v3 IIFE bundles throw in browsers; the PR merged with the maintainer's fix and runtime smoke test.
 
 - proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
 

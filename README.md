@@ -92,6 +92,7 @@ Submitted upstream changes backed by reproducible regression evidence and broade
 
 | Project | Change | Status |
 | --- | --- | --- |
+| [NethermindEth/nethermind #14228](https://github.com/NethermindEth/nethermind/pull/14228) | Fixed acceptance of cached JWTs after explicit `exp`, with expiration-boundary regressions for both parser paths | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/nethermind/14228?style=flat-square&label=) Changes requested |
 | [promptfoo/mcp-agent-provider #95](https://github.com/promptfoo/mcp-agent-provider/pull/95) | Replaced message-count token estimates and hard-coded cost with measured OpenAI usage aggregated across ReAct iterations; Node 20/22/24 and Biome CI pass | ![state](https://img.shields.io/github/pulls/detail/state/promptfoo/mcp-agent-provider/95?style=flat-square&label=) |
 | [promptfoo/mcp-agent-provider #96](https://github.com/promptfoo/mcp-agent-provider/pull/96) | Fixed Streamable HTTP → legacy SSE fallback so compatibility retry happens after connection negotiation, with an end-to-end SSE server regression; Node 20/22/24 and Biome CI pass | ![state](https://img.shields.io/github/pulls/detail/state/promptfoo/mcp-agent-provider/96?style=flat-square&label=) |
 | [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Kept tracing topic labels visible to metrics at the default `info` log level, with an integration regression | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |

@@ -36,9 +36,9 @@ Fixes merged, cherry-picked or otherwise incorporated upstream by project mainta
 | [NethermindEth/nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | **Medium · protocol availability** | Fixed the Amsterdam Engine API boundary: `engine_getPayloadV5` now returns `-38005 Unsupported fork` at Amsterdam instead of dropping `slotNumber` and `blockAccessList`. Added a red/green regression and preserved Osaka V5 behaviour; merged upstream and closed [#13713](https://github.com/NethermindEth/nethermind/issues/13713) |
 | [DefiLlama/peggedassets-server](https://github.com/DefiLlama/peggedassets-server/pull/927) | — | Corrected the EURR issuer attribution: Bridge Building S.A. issues it, Revolut distributes it |
 | [centrifuge/api-v3](https://github.com/centrifuge/api-v3/pull/489) | — | Added the Pharos block explorer URL |
-| [solana-foundation/solana-web3.js #3943](https://github.com/solana-foundation/solana-web3.js/pull/3943) | — | Added runtime smoke tests for both IIFE browser bundles. Review surfaced a Rollup substitution bug that made the v3 bundles throw in browsers; the PR merged with the maintainer's fix |
+| [solana-foundation/solana-web3.js #3943](https://github.com/solana-foundation/solana-web3.js/pull/3943) | **Medium · release integrity** | Added runtime smoke tests for both IIFE browser bundles. Review surfaced a Rollup substitution bug that made the v3 bundles throw in browsers; the PR merged with the maintainer's fix |
 
-Impact is listed only for findings with demonstrated security, scanner-integrity or protocol-availability consequences; ratings are evidence-based and not upstream-assigned.
+Impact is listed only for findings with demonstrated security, scanner-integrity, protocol-availability or release-integrity consequences; ratings are evidence-based and not upstream-assigned.
 
 Also:
 

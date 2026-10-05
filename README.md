@@ -43,7 +43,7 @@ Impact is listed only for findings with demonstrated security, scanner-integrity
 Also:
 
 - proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
-- EthSystems maintainers accepted and consolidated three validated web fixes ([#46](https://github.com/ethsystems/web/pull/46), [#47](https://github.com/ethsystems/web/pull/47) and [#48](https://github.com/ethsystems/web/pull/48)) in [#49](https://github.com/ethsystems/web/pull/49), preserving my commit authorship. The patches repair sibling RFP routing, restore continuation-line glossary definitions and replace a stale Custom UTXO reference; the combined suite passed 62/62 tests. GitHub records #49 as closed, with the public `main` sync pending.
+- EthSystems consolidated three validated web fixes ([#46](https://github.com/ethsystems/web/pull/46), [#47](https://github.com/ethsystems/web/pull/47) and [#48](https://github.com/ethsystems/web/pull/48)) into bot PR [#49](https://github.com/ethsystems/web/pull/49), preserving my authorship across all three commits. The patches repair sibling RFP routing, restore continuation-line glossary definitions and replace a stale Custom UTXO reference; the combined suite passed 62/62 tests. Maintainer Rymnc closed #49 without merging it on 5 October 2026, so I do not count these three fixes as merged upstream while `main` remains unchanged.
 
 ## Selected work
  

@@ -17,6 +17,7 @@ Fixes merged, cherry-picked or otherwise incorporated upstream by project mainta
 
 | Project | Impact | Change |
 | --- | --- | --- |
+| [openai/codex-security #1306](https://github.com/openai/codex-security/pull/1306) | **Medium · security coverage** | Added Vyper `.vy` sources to scan inventories and ranking paths so Vyper-only changes are not omitted before review-item generation. OpenAI maintainer independently verified all five new inventory/ranking regressions fail on the parent and pass with the fix; 295 affected-module tests passed with no blocking behaviour issues. Merged upstream as [`d327164`](https://github.com/openai/codex-security/commit/d32716411f3d7b87085b36f9de55f0ac40454c42) |
 | [openai/codex-security #1021](https://github.com/openai/codex-security/pull/1021) | **Medium · security coverage** | Added Solidity `.sol` files to diff scan inventories and rank inputs, with red/green coverage across repository, revision and local-patch modes |
 | [openai/codex-security #1020](https://github.com/openai/codex-security/pull/1020) | — | Required verification evidence before `no_change` remediation results are treated as resolved, with a regression proving evidence-free results fail closed |
 | [openai/openai-guardrails-js #148](https://github.com/openai/openai-guardrails-js/pull/148) | — | Fixed vector-store uploads for supported documents inside directories whose names contain dots. Three red/green regressions, 882 tests, multi-version CI and CodeQL passed |
@@ -96,7 +97,6 @@ Submitted upstream changes backed by reproducible regression evidence and broade
 
 | Project | Change | Status |
 | --- | --- | --- |
-| [openai/codex-security #1306](https://github.com/openai/codex-security/pull/1306) | Added Vyper `.vy` sources to scan inventories and ranking paths. OpenAI maintainer independently reproduced all five new inventory/ranking cases: they fail on the parent and pass with the change; 295 tests across the affected Python modules passed with no blocking behaviour issues found | **Approved · maintainer-verified** |
 | [promptfoo/mcp-agent-provider #95](https://github.com/promptfoo/mcp-agent-provider/pull/95) | Replaced message-count token estimates and hard-coded cost with measured OpenAI usage aggregated across ReAct iterations; Node 20/22/24 and Biome CI pass | ![state](https://img.shields.io/github/pulls/detail/state/promptfoo/mcp-agent-provider/95?style=flat-square&label=) |
 | [promptfoo/mcp-agent-provider #96](https://github.com/promptfoo/mcp-agent-provider/pull/96) | Fixed Streamable HTTP → legacy SSE fallback so compatibility retry happens after connection negotiation, with an end-to-end SSE server regression; Node 20/22/24 and Biome CI pass | ![state](https://img.shields.io/github/pulls/detail/state/promptfoo/mcp-agent-provider/96?style=flat-square&label=) |
 | [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Kept tracing topic labels visible to metrics at the default `info` log level, with an integration regression | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |

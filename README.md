@@ -1,15 +1,30 @@
 # Arunim Shukla
 
-![AI](https://img.shields.io/badge/AI-1F3A5F?style=flat-square)
-![Security](https://img.shields.io/badge/Security-1F3A5F?style=flat-square)
-![Technical PMM](https://img.shields.io/badge/Technical%20PMM-1F3A5F?style=flat-square)
-![Open Source](https://img.shields.io/badge/Open%20Source-1F3A5F?style=flat-square&logo=github&logoColor=white)
-![Ethereum](https://img.shields.io/badge/Ethereum-1F3A5F?style=flat-square&logo=ethereum&logoColor=white)
-![Developer Tooling](https://img.shields.io/badge/Developer%20Tooling-1F3A5F?style=flat-square)
-![AI Tooling](https://img.shields.io/badge/AI_Tooling-1F3A5F?style=flat-square)
-![GTM Strategy](https://img.shields.io/badge/GTM_Strategy-1F3A5F?style=flat-square)
+**Open-source fixes · Security and AI tooling · Technical strategy**
 
-I work at the intersection of security, open source, Ethereum and AI, with a focus on technical product marketing and developer-facing products.
+I investigate reproducible software failures, build focused regressions, and work with maintainers to get fixes upstream. I also translate complex engineering work into clear, useful technical communication.
+
+[Proof-of-work case studies](https://github.com/arunimshukla/open-source-fix-analysis) · [Complete upstream record](#merged-upstream) · [LinkedIn](https://www.linkedin.com/in/arunimshukla)
+
+## Selected fixes
+
+A short, evidence-led selection. Each link leads to the original upstream PR; detailed red/green case studies are in [Open Source Fix Analysis](https://github.com/arunimshukla/open-source-fix-analysis).
+
+| Project | Fix | Evidence |
+| --- | --- | --- |
+| [OpenAI Codex Security #1306](https://github.com/openai/codex-security/pull/1306) | Restored Vyper `.vy` coverage in scanning inventories and ranking | Maintainer independently verified five red/green cases; 295 affected-module tests passed |
+| [Nethermind #14228](https://github.com/NethermindEth/nethermind/pull/14228) | Prevented cached JWTs being accepted past their explicit expiry | Deterministic expiry-boundary regression; merged upstream |
+| [Polygon Agent CLI #142](https://github.com/0xPolygon/polygon-agent-cli/pull/142) | Prevented `x402-pay` from broadcasting payments during dry runs | Standard and Bazaar payment-path regressions; merged upstream |
+| [EthSystems Works #51](https://github.com/ethsystems/works/pull/51) | Removed a reproducible `rotortree` snapshot panic at maximum tree depth | Red/green regression, 180 all-feature tests; merged upstream |
+| [Promptfoo MCP Agent Provider #95](https://github.com/promptfoo/mcp-agent-provider/pull/95) | Replaced fabricated token-usage estimates with measured OpenAI usage | Real-SDK loopback regressions; merged upstream |
+
+## Selected work
+
+**[Open Source Fix Analysis](https://github.com/arunimshukla/open-source-fix-analysis)** — Plain-English case studies linking the root cause, minimal patch, tests, review and merge evidence.
+
+- [GTM-Teardowns](https://github.com/arunimshukla/GTM-Teardowns) — Public, audit-first go-to-market and positioning teardowns.
+- [Web3 Security Library](https://github.com/immunefi-team/Web3-Security-Library) — Security education and tooling contributions from my time at Immunefi ([commit history](https://github.com/immunefi-team/Web3-Security-Library/commits?author=Arunim-Immunefi)).
+- [Best-DeFi-Security-Practices](https://github.com/arunimshukla/Best-DeFi-Security-Practices) — Reference collection of security practices for DeFi protocols.
 
 ## Merged upstream
 
@@ -30,7 +45,6 @@ Fixes merged, cherry-picked or otherwise incorporated upstream by project mainta
 | [ethereum/go-ethereum](https://github.com/ethereum/go-ethereum/pull/35710) | — | Corrected the `eth` RPC endpoint documentation |
 | [ethereum/ethereum-org-website #19272](https://github.com/ethereum/ethereum-org-website/pull/19272) | — | Synced the Glamsterdam proposal list, removing EIP-7610 and adding eth/72 (EIP-8070), EIP-8136 and snap/2 (EIP-8189). Shipped to production in [ethereum.org v11.29.0 / #19406](https://github.com/ethereum/ethereum-org-website/pull/19406), where I was credited in the release contributors list. Maintainers also added me as an ethereum.org maintenance contributor in [#19364](https://github.com/ethereum/ethereum-org-website/pull/19364) |
 | [ethereum/ethereum-org-website #19368](https://github.com/ethereum/ethereum-org-website/pull/19368) | — | Repaired contributor onboarding in the repository README: replaced two dead links, corrected build-locale setup to use `.env.local`, added the missing staging step before commit, and fixed first-push instructions with `git push -u origin HEAD`. Reproduced each failure path before the fix; approved by a maintainer and merged upstream as [`efb29af`](https://github.com/ethereum/ethereum-org-website/commit/efb29af97f47ab076c52bcb3771dd5facafdc377). Included in the [ethereum.org v11.29.1 deployment (#19430)](https://github.com/ethereum/ethereum-org-website/pull/19430), which explicitly credits me in its documentation changelog and contributor acknowledgements |
-| [ethereum/ethereum-org-website #19409](https://github.com/ethereum/ethereum-org-website/pull/19409) | **Medium · data availability** | Prevented a transient failure in one Google Sheets app category from overwriting the last good cached catalog with an empty category. Added a regression that returns `503 Service Unavailable` for one category and proves the fetch fails closed instead of persisting partial data; upstream CI passed |
 | [google/skill-reach](https://github.com/google/skill-reach/pull/23) | — | Preserved query metadata across CSV and JSONL exchange formats |
 | [nasa/delta](https://github.com/nasa/delta/pull/158) | — | Fixed cache eviction for files |
 | [Samsung/CredSweeper](https://github.com/Samsung/CredSweeper/pull/951) | **Medium · scanner coverage** | Fixed CRX3 payload extraction, so credentials inside current Chrome extensions are no longer skipped |
@@ -61,24 +75,6 @@ Also:
 
 - proposed the fix for a reported Claude Code startup failure in Trail of Bits' `second-opinion` plugin ([#303](https://github.com/trailofbits/skills/pull/303)). The maintainer shipped the same fix in [#306](https://github.com/trailofbits/skills/pull/306).
 
-## Selected work
- 
-[![Open Source Fix Analysis](https://github-readme-stats.vercel.app/api/pin/?username=arunimshukla&repo=open-source-fix-analysis&theme=transparent&hide_border=true)](https://github.com/arunimshukla/open-source-fix-analysis)
-
-Plain-English case studies of verified open-source fixes, with each problem, change and proof recorded.
-
-- [GTM-Teardowns](https://github.com/arunimshukla/GTM-Teardowns):
-  public, audit-first go-to-market teardowns of target companies.
-  
-- [Web3 Security Library](https://github.com/immunefi-team/Web3-Security-Library)
-  ![Stars](https://img.shields.io/github/stars/immunefi-team/Web3-Security-Library?style=flat-square&label=stars&color=1F3A5F):
-  Immunefi's library of Web3 security tutorials and tools. Second-largest contributor while at Immunefi
-  
-  ([commits](https://github.com/immunefi-team/Web3-Security-Library/commits?author=Arunim-Immunefi)).
-- [Best-DeFi-Security-Practices](https://github.com/arunimshukla/Best-DeFi-Security-Practices)
-  ![Stars](https://img.shields.io/github/stars/arunimshukla/Best-DeFi-Security-Practices?style=flat-square&label=stars&color=1F3A5F):
-  a reference list of security practices for DeFi protocols.
-
 ## 📊 GitHub Stats
 
 <p>
@@ -103,26 +99,27 @@ Plain-English case studies of verified open-source fixes, with each problem, cha
 ![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)
 ![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
 
-## Recent validated contributions
+## Open contributions under review
 
-Submitted upstream changes backed by reproducible regression evidence and broader checks. Entries stay here until merged; maintainer-approved work is labelled explicitly and is not presented as merged.
+Validated upstream changes that have **not** merged. Review and test status are stated explicitly; closed or superseded PRs are recorded separately.
 
 | Project | Change | Status |
 | --- | --- | --- |
+| [ethereum/ethereum-org-website #19409](https://github.com/ethereum/ethereum-org-website/pull/19409) | Prevents a failed Google Sheets category request from replacing a previously cached apps category with an empty result. A mocked `503` regression proves the fetch rejects instead of returning partial data; the PR reports 1,324 passing tests on the fork | **Open · awaiting maintainer review** (not merged) |
 | [NethermindEth/nethermind #14338](https://github.com/NethermindEth/nethermind/pull/14338) | Corrected Docker image metadata to advertise P2P discovery on `30303/udp` alongside `30303/tcp`, with regression coverage of standard and chiseled images. Published image metadata reproduced the omission; patched builds and validation CI passed. This affects automatic port publishing, not the runtime networking configuration | **Approved by two maintainers · awaiting merge** ([AnkushinDaniil](https://github.com/NethermindEth/nethermind/pull/14338#pullrequestreview-5456152793), [manusw7](https://github.com/NethermindEth/nethermind/pull/14338#pullrequestreview-5478709306)) |
-| [NethermindEth/nethermind #14372](https://github.com/NethermindEth/nethermind/pull/14372) | Normalised malformed receipt post-state lengths to `RlpException` instead of a generic `ArgumentException`, keeping invalid peer input on the standard RLP deserialisation path. Locally reproduced; regressions cover 5, 31, 33 and 34-byte first items across both receipt decoder variants | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/nethermind/14372?style=flat-square&label=) |
-| [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | Kept tracing topic labels visible to metrics at the default `info` log level, with an integration regression | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/714?style=flat-square&label=) |
-| [NethermindEth/pluto #715](https://github.com/NethermindEth/pluto/pull/715) | Stopped ignored OTLP header values from leaking into WARN logs; the warning now records only the header count | ![state](https://img.shields.io/github/pulls/detail/state/NethermindEth/pluto/715?style=flat-square&label=) |
+| [NethermindEth/nethermind #14372](https://github.com/NethermindEth/nethermind/pull/14372) | Normalises malformed receipt post-state lengths to `RlpException` across standard, eth/69 and Optimism decoders, with 5/31/33/34-byte regressions. The Optimism follow-up and missing `System.Diagnostics` import have been pushed | **Follow-up patched · awaiting maintainer re-review** ([review](https://github.com/NethermindEth/nethermind/pull/14372#pullrequestreview-5478708844)); no fresh green upstream CI confirmed |
 
 <!-- Move an entry to "Merged upstream" only when GitHub records a merge or a maintainer provides a verifiable upstream commit incorporating the change.
 Move human-reviewed open work to "In review"; remove entries closed without acceptance. -->
 
 ## Validated findings and upstream triage
 
-These records distinguish a confirmed issue fixed independently from technical investigation on someone else's report. Neither is presented as a merged PR or as upstream code authorship.
+This section records useful findings that did not result in a merge of my own PR. Superseded fixes are not counted as merged code contributions.
 
 | Project | Outcome | Evidence and contribution |
 | --- | --- | --- |
+| [NethermindEth/pluto #714](https://github.com/NethermindEth/pluto/pull/714) | **Superseded · not merged** | Reproduced missing topic labels in warning/error metrics at `info` and submitted a focused integration regression. Maintainer closed my PR as superseded by [#720](https://github.com/NethermindEth/pluto/pull/720), which implemented related tracing fixes. My PR was not merged |
+| [NethermindEth/pluto #715](https://github.com/NethermindEth/pluto/pull/715) | **Superseded · not merged** | Reproduced OTLP header credentials appearing in warning logs and proposed redaction. Maintainer closed my PR because the issue was already addressed in [#717](https://github.com/NethermindEth/pluto/pull/717). My PR was not merged |
 | [apple/embedding-atlas #260](https://github.com/apple/embedding-atlas/pull/260) | **Confirmed · fixed independently** | Identified the drag-release callback passing raw `MouseEvent` instead of the declared `CursorValue`; provided a regression checking coordinates and modifier keys. Utility and viewer tests passed (103 and 143). The identical one-line `e2` → `v2` correction shipped separately in [Apple commit `73e4901` / #261](https://github.com/apple/embedding-atlas/commit/73e4901e71d7e71d79cd96acaf76993064c3eea6). Maintainer [confirmed the prior fix](https://github.com/apple/embedding-atlas/pull/260#issuecomment-6064876861) and closed my PR without merging it |
 | [solana-foundation/surfpool #814](https://github.com/solana-foundation/surfpool/issues/814) | **Technical review · issue closed** | Reviewed the concurrent slot-lifecycle [PR #778](https://github.com/solana-foundation/surfpool/pull/778), highlighted the missing embedded offline SDK transaction-mode / signature-status polling regression, and [proposed a comparative reproduction strategy](https://github.com/solana-foundation/surfpool/issues/814#issuecomment-5758702802). Issue originally reported by `ifiokjr`; closed as completed without a fixing commit identified in its issue timeline. No upstream patch or original discovery is claimed |
 

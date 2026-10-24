@@ -35,6 +35,18 @@ A short, evidence-led selection. Each link leads to the original upstream PR; de
 
 **[Open Source Fix Analysis](https://github.com/arunimshukla/open-source-fix-analysis)** — Plain-English case studies linking the root cause, minimal patch, tests, review and merge evidence.
 
+Additional merged contributions across security tooling, protocol implementation, AI-agent interoperability and developer workflows:
+
+| Project | Contribution and impact | Evidence |
+| --- | --- | --- |
+| [OpenAI Codex Security #1020](https://github.com/openai/codex-security/pull/1020) | Made `scan --patch` fail when a `no_change` result omitted its verification explanation, closing a path that could report success without stating how the finding was checked | Regressions for missing and blank explanations; 72 focused tests passed; merged upstream |
+| [Nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Enforced the Amsterdam Engine API boundary: `engine_getPayloadV5` returns `-38005 Unsupported fork` instead of succeeding, while preserving Osaka V5 behaviour | Red/green regression in both fixture modes; 33 focused API tests passed; merged upstream |
+| [Promptfoo MCP Agent Provider #96](https://github.com/promptfoo/mcp-agent-provider/pull/96) | Repaired Streamable HTTP → legacy SSE fallback when incompatibility appears during connection negotiation; closes the failed transport and retries with a fresh MCP client | End-to-end regression against the SDK's legacy SSE server; merged upstream |
+| [WhatsApp Erlang Language Platform #284](https://github.com/WhatsApp/erlang-language-platform/pull/284) | Restored grouped Common Test execution by adding the missing `--group` flag to Rebar3 runnables | Red/green coverage for grouped and ungrouped cases; [imported and merged by Meta](https://github.com/WhatsApp/erlang-language-platform/pull/284#issuecomment-6078526521) |
+| [Solana Governance #242](https://github.com/solana-foundation/solana-governance/pull/242) | Restored the complete filtered and sorted Top Voters CSV export, with CSV escaping, formula-prefix neutralisation for external metadata and protection against downloads during background refetches | 17 focused regression tests and 434 total tests passed; merged upstream |
+
+**Research and communication**
+
 - [GTM-Teardowns](https://github.com/arunimshukla/GTM-Teardowns) — Public, audit-first go-to-market and positioning teardowns.
 - [Web3 Security Library](https://github.com/immunefi-team/Web3-Security-Library) — Security education and tooling contributions from my time at Immunefi ([commit history](https://github.com/immunefi-team/Web3-Security-Library/commits?author=Arunim-Immunefi)).
 - [Best-DeFi-Security-Practices](https://github.com/arunimshukla/Best-DeFi-Security-Practices) — Reference collection of security practices for DeFi protocols.

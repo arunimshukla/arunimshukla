@@ -6,6 +6,19 @@ I investigate reproducible software failures, build focused regressions, and wor
 
 [Proof-of-work case studies](https://github.com/arunimshukla/open-source-fix-analysis) · [Complete upstream record](#merged-upstream) · [LinkedIn](https://www.linkedin.com/in/arunimshukla)
 
+## Featured contribution: OSS Verify
+
+**Discovered and fixed silent failures in the build and validation pipeline of a formal-verification project.**
+
+[Theorem Labs' OSS Verify](https://github.com/theorem-labs/oss-verify) proves properties of specific compiled fuzz-target binaries, [pinned by SHA-256](https://github.com/theorem-labs/oss-verify/blob/main/docs/what-gets-proven.md#the-statements). In [PR #9](https://github.com/theorem-labs/oss-verify/pull/9), I identified two ways its tooling could silently omit an intended constraint:
+
+- **Allocation-failure coverage:** Libraries linked through `-l` could bypass allocator rewriting. A native fixture that crashed when an allocation was correctly forced to fail instead exited successfully; allocation counting also missed the call.
+- **Binary identity checks:** Repeated `--lock` arguments could overwrite a conflicting SHA-256 pin, allowing the comparison to pass even though the binary did not match one of the supplied locks.
+
+Maintainers [independently reproduced both defects](https://github.com/theorem-labs/oss-verify/pull/9#issuecomment-6373690633): 16 regression cases failed on unpatched main. They incorporated my fixes through [PR #13](https://github.com/theorem-labs/oss-verify/pull/13) / [`906db00`](https://github.com/theorem-labs/oss-verify/commit/906db00b97941e8823a5faf954de32c2cb7520c0), preserving my commits and crediting me as co-author. The demonstrated impact was in instrumentation and lock validation; the maintainer confirmed released binaries were unchanged.
+
+**Related merged work:** [PR #7 → #12](https://github.com/theorem-labs/oss-verify/pull/12) repaired locked-commit rebuilds and annotated-tag resolution, with 12 real-Git regression cases. Full merge and test evidence for both contributions is recorded [below](#merged-upstream).
+
 ## Selected fixes
 
 A short, evidence-led selection. Each link leads to the original upstream PR; detailed red/green case studies are in [Open Source Fix Analysis](https://github.com/arunimshukla/open-source-fix-analysis).

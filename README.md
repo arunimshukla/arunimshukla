@@ -19,26 +19,17 @@ Maintainers [independently reproduced both defects](https://github.com/theorem-l
 
 **Related merged work:** [PR #7 → #12](https://github.com/theorem-labs/oss-verify/pull/12) repaired locked-commit rebuilds and annotated-tag resolution, with 12 real-Git regression cases. Full merge and test evidence for both contributions is recorded [below](#merged-upstream).
 
-## Selected fixes
+## Selected work
 
 A short, evidence-led selection. Each link leads to the original upstream PR; detailed red/green case studies are in [Open Source Fix Analysis](https://github.com/arunimshukla/open-source-fix-analysis).
 
-| Project | Fix | Evidence |
+| Project | Contribution and impact | Evidence |
 | --- | --- | --- |
 | [OpenAI Codex Security #1306](https://github.com/openai/codex-security/pull/1306) | Restored Vyper `.vy` coverage in scanning inventories and ranking | Maintainer independently verified five red/green cases; 295 affected-module tests passed |
 | [Nethermind #14228](https://github.com/NethermindEth/nethermind/pull/14228) | Prevented cached JWTs being accepted past their explicit expiry | Deterministic expiry-boundary regression; merged upstream |
 | [Polygon Agent CLI #142](https://github.com/0xPolygon/polygon-agent-cli/pull/142) | Prevented `x402-pay` from broadcasting payments during dry runs | Standard and Bazaar payment-path regressions; merged upstream |
 | [EthSystems Works #51](https://github.com/ethsystems/works/pull/51) | Removed a reproducible `rotortree` snapshot panic at maximum tree depth | Red/green regression, 180 all-feature tests; merged upstream |
 | [Promptfoo MCP Agent Provider #95](https://github.com/promptfoo/mcp-agent-provider/pull/95) | Replaced fabricated token-usage estimates with measured OpenAI usage | Real-SDK loopback regressions; merged upstream |
-
-## Selected work
-
-**[Open Source Fix Analysis](https://github.com/arunimshukla/open-source-fix-analysis)** — Plain-English case studies linking the root cause, minimal patch, tests, review and merge evidence.
-
-Additional merged contributions across security tooling, protocol implementation, AI-agent interoperability and developer workflows:
-
-| Project | Contribution and impact | Evidence |
-| --- | --- | --- |
 | [OpenAI Codex Security #1020](https://github.com/openai/codex-security/pull/1020) | Made `scan --patch` fail when a `no_change` result omitted its verification explanation, closing a path that could report success without stating how the finding was checked | Regressions for missing and blank explanations; 72 focused tests passed; merged upstream |
 | [Nethermind #13755](https://github.com/NethermindEth/nethermind/pull/13755) | Enforced the Amsterdam Engine API boundary: `engine_getPayloadV5` returns `-38005 Unsupported fork` instead of succeeding, while preserving Osaka V5 behaviour | Red/green regression in both fixture modes; 33 focused API tests passed; merged upstream |
 | [Promptfoo MCP Agent Provider #96](https://github.com/promptfoo/mcp-agent-provider/pull/96) | Repaired Streamable HTTP → legacy SSE fallback when incompatibility appears during connection negotiation; closes the failed transport and retries with a fresh MCP client | End-to-end regression against the SDK's legacy SSE server; merged upstream |

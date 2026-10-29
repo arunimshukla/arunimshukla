@@ -133,6 +133,7 @@ Validated upstream changes that have **not** merged. Review and test status are 
 
 | Project | Change | Status |
 | --- | --- | --- |
+| [NethermindEth/juno #4199](https://github.com/NethermindEth/juno/pull/4199) | Suppresses server-busy replies for valid JSON-RPC WebSocket notifications and allowed notification-only batches when the admission gate is full. Preserves batch-disable and size limits; validates batches one element at a time and stops at the first ID-bearing or invalid element. Includes 37 real-WebSocket regression cases and batch benchmarks | **Open · [approved by `brbrr`](https://github.com/NethermindEth/juno/pull/4199#pullrequestreview-5697290455)** (not merged) |
 | [ethereum/ethereum-org-website #19409](https://github.com/ethereum/ethereum-org-website/pull/19409) | Prevents a failed Google Sheets category request from replacing a previously cached apps category with an empty result. A mocked `503` regression proves the fetch rejects instead of returning partial data; the PR reports 1,324 passing tests on the fork | **Open · awaiting maintainer review** (not merged) |
 
 <!-- Move an entry to "Merged upstream" only when GitHub records a merge or a maintainer provides a verifiable upstream commit incorporating the change.

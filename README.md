@@ -12,6 +12,8 @@ I trace product and customer claims back to the evidence a buyer can check. In m
 
 ## Upstream fixes
 
+In BlobKit, direct EIP-7594 blob submissions required a custom signing method that standard ethers wallets lack. I added support for standard ethers wallets, preserved the existing custom signer flow, and added three tests covering both signer types and the error for unsupported signers. [Merged PR #116](https://github.com/ETHCF/blobkit/pull/116).
+
 In Microsoft's [Web Dev for Beginners banking API](https://github.com/microsoft/Web-Dev-For-Beginners/pull/1927), deleting a transaction removed the ledger entry but left the account balance unchanged. I fixed the reconciliation bug, made the Express app importable for testing, and added an HTTP regression test covering the create-delete cycle. [Merged PR #1927](https://github.com/microsoft/Web-Dev-For-Beginners/pull/1927).
 
 In OSS Verify, I found that indirect library inputs could bypass allocation instrumentation and repeated lock files could hide conflicting binary hashes. Maintainers reproduced 16 failing regression cases on the original code and carried my changes into [PR #13](https://github.com/theorem-labs/oss-verify/pull/13). [Read the fix analyses](https://github.com/arunimshukla/open-source-fix-analysis) · [Full upstream record](UPSTREAM.md#merged-upstream)

@@ -12,6 +12,8 @@ I trace product and customer claims back to the evidence a buyer can check. In m
 
 ## Upstream fixes
 
+In [Sourcify](https://github.com/argotorg/sourcify), repeated requests after a completed no-match similarity verification launched redundant bytecode fetches, searches and jobs. I added a configurable cooldown that rejects immediate retries with HTTP `429` and `Retry-After`, backed by persisted job history and regression tests. The PR reports 38 passing focused tests, including 13 new cases. [Merged PR #3002](https://github.com/argotorg/sourcify/pull/3002).
+
 In BlobKit, direct EIP-7594 blob submissions required a custom signing method that standard ethers wallets lack. I added support for standard ethers wallets, preserved the existing custom signer flow, and added three tests covering both signer types and the error for unsupported signers. [Merged PR #116](https://github.com/ETHCF/blobkit/pull/116).
 
 In Microsoft's [Web Dev for Beginners banking API](https://github.com/microsoft/Web-Dev-For-Beginners/pull/1927), deleting a transaction removed the ledger entry but left the account balance unchanged. I fixed the reconciliation bug, made the Express app importable for testing, and added an HTTP regression test covering the create-delete cycle. [Merged PR #1927](https://github.com/microsoft/Web-Dev-For-Beginners/pull/1927).

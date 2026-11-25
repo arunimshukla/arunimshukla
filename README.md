@@ -18,6 +18,8 @@ I trace product and customer claims back to the evidence a buyer can check. In m
 
 - **[Nethermind Juno](https://github.com/NethermindEth/juno) — JSON-RPC notifications** — Fixed error responses incorrectly sent to notifications, including when WebSocket admission was saturated. Added regression coverage for notification-only and mixed requests while preserving replies to requests with IDs. [PR #4146](https://github.com/NethermindEth/juno/pull/4146) · [PR #4199](https://github.com/NethermindEth/juno/pull/4199).
 
+- **[Nethermind Juno](https://github.com/NethermindEth/juno) — Message status RPC** — A single missing execution status could prevent `starknet_getMessagesStatus` from returning any results. Fixed RPC v0.9 and v0.10 to skip those entries and preserve valid statuses in receipt order, with regression coverage in both versions. [Merged PR #4280](https://github.com/NethermindEth/juno/pull/4280).
+
 - **[Promptfoo MCP Agent Provider](https://github.com/promptfoo/mcp-agent-provider)** — Replaced message-count estimates of OpenAI token usage with measured usage aggregated across agent iterations; removed unsupported synthetic cost reporting and added real-SDK regressions. [Merged PR #95](https://github.com/promptfoo/mcp-agent-provider/pull/95).
 
 - **[Sourcify](https://github.com/argotorg/sourcify)** — Repeated requests after a completed no-match similarity verification launched redundant bytecode fetches, searches and jobs. I added a configurable cooldown that rejects immediate retries with HTTP `429` and `Retry-After`, backed by persisted job history and regression tests. The PR reports 38 passing focused tests, including 13 new cases. [Merged PR #3002](https://github.com/argotorg/sourcify/pull/3002).
